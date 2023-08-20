@@ -1,0 +1,391 @@
+.head {
+   min-height: 100vh;
+   display: flex;
+   flex-flow: column;
+   justify-content: space-between;
+   background: url('../images/hlegal-symbol.svg') no-repeat center/auto 100%;
+   
+   @media screen and (min-width: $breakpoint-md) {
+		background-size: cover;
+	}
+	@media screen and (min-width: $breakpoint-lg) {
+		background-size: auto 100%;
+	}
+
+   &__title {
+      @include title($basic-white);
+		@include flex-center;
+		text-align: center;
+   }
+
+   &__link {
+      width: 42px;
+      height: 42px;
+      border: 1px solid $basic-white;
+      border-radius: $radius-rounded;
+      position: relative;
+      margin: 0 auto 30px;
+      transition: .3s ease;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 10px;
+         left: 13px;
+         width: 14px;
+         height:14px;
+         border-bottom: 2px solid $basic-white;
+         border-left: 2px solid $basic-white;
+         transform: rotate(-45deg);
+
+         &:hover {
+            border-color: $accent-color;
+         }
+      }
+
+      &:hover::before {
+         border-color: $accent-color;
+      }
+
+      &:hover {
+         border-color: $accent-color;
+      }
+   }
+}
+
+.header {
+   padding-bottom: 15px;
+   @media screen and (min-width: $breakpoint-md) {
+		padding: 50px 0 30px;
+	}
+
+	&__container {
+		@media screen and (min-width: $breakpoint-lg) {
+			position: relative;
+		}
+	}
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      padding: 10px 30px;
+      background: rgba($bg-color, 0.2);
+      margin: 0 -30px 15px;
+
+      &--light {
+         background: $bg-color;
+      }
+      
+      @media screen and (min-width: $breakpoint-md) {
+         margin: 0 0 30px;
+         padding: 0;
+         background: transparent;
+         justify-content: flex-start;
+         gap: 6px;
+      }
+      @media screen and (min-width: $breakpoint-lg) {
+         justify-content: flex-end;
+         margin-bottom: 15px;
+      }
+   }
+
+   &__langs {
+      display: flex;
+   }
+
+   &__langs-link {
+      @include text-link ($basic-white);
+      font-size: 12px;
+      padding: 5px 7px;
+      display: block;
+      border-radius: $radius-sm;
+      text-transform: uppercase;
+      transition: .3s ease;
+
+      &--light {
+         @include text-link ($text-color);
+      }
+
+      &.active {
+         background: $accent-color;
+      }
+
+      &:hover {
+         background: rgb($basic-white, 0.2); 
+      }
+
+      &--light:hover {
+         background: $bg-color; 
+      }
+   }
+
+   &__address {
+      display: none;
+      @media screen and (min-width: $breakpoint-md) {
+			display: block;
+			color: $text-color;
+			font-weight: 400;	
+		}
+   }
+
+	&__phone {
+      @include text-link ($basic-white);
+      &--light {
+         @include text-link ($text-color);
+      }
+	}
+
+	&__social {
+      display: none;
+      @media screen and (min-width: $breakpoint-md) {
+			display: block;
+         cursor: pointer;
+		}
+	}
+
+   &__social-image {
+      width: 24px;
+      height: 24px;
+		fill: $basic-white;
+      transition: .3s ease;
+      &--light {
+         fill: $text-color;
+      }
+      &:hover {
+         fill: $accent-color;
+      }
+   }
+
+   &__box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (min-width: $breakpoint-md) {
+			margin-bottom: 30px;
+		}
+		@media screen and (min-width: $breakpoint-lg) {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 30px;
+			margin-bottom: 0;
+		}
+   }
+
+   &__box-logo {
+      @include text-link ($basic-white);
+      font-size: 20px;
+      line-height: 1.6;
+      display: flex;
+      text-align: center;
+      gap: 20px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAxMiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04LjcyODI3IDBIMTEuOTUwNUwzLjU1NTc0IDI2SDAuMzMzNDk2TDguNzI4MjcgMFoiIGZpbGw9IiNGMDE0NUEiLz4KPC9zdmc+Cg==");
+      background-repeat: no-repeat;
+      background-position: 75px 0;
+      background-size: auto 26px;
+
+      &--light {
+         @include text-link ($main-color);
+      }
+
+      @media screen and (min-width: $breakpoint-md) {
+         gap: 40px;
+         background-position: 137px 0;
+         background-size: auto 47px;
+		}
+
+      img {
+			width: 70px;
+			height: 32px;
+			@media screen and (min-width: $breakpoint-md) {
+				width: 130px;
+				height: 60px;
+			}
+		}
+
+      span {
+         line-height: 1.2;
+         @media screen and (min-width: $breakpoint-md) {
+            font-size: 36px;
+            line-height: 1.2;
+         }
+      }
+   }
+
+   &__box-burger {
+      width: 36px;
+      height: 32px;
+      cursor: pointer;
+      border-radius: $radius-sm;
+      position: relative;
+      @media screen and (min-width: $breakpoint-md) {
+			display: none;
+      }
+
+      &::before, &::after, span {
+         position: absolute;
+         content: '';
+         top: 6px;
+         left: 6px;
+         right: 0;
+         width: 24px;
+         height: 2px;
+         background: $basic-white;      
+      }
+
+      &:hover::before, &:hover::after {
+         background: $main-color;
+      }
+
+      &:hover span {
+         background: $main-color;
+      }
+
+      &--light::before, &--light::after, &--light span {
+         background: $main-color;
+      }
+
+      &::after {
+         top:auto;
+         bottom: 6px;
+      }
+
+      span{
+         top: 50%;
+         transform: translateY(-50%);
+      }
+
+      &:hover {
+         background: $separator-color;
+      }
+   }
+
+   &__nav {
+      position: fixed;
+      bottom: -100%;
+      left: 8px;
+      right: 8px;
+      background: $basic-white;
+      border-radius: $radius-sm $radius-sm 0 0;
+      padding: 12px;
+      transition: bottom .2s linear;
+		&.active {
+			bottom: 0;
+		}
+
+      @media screen and (min-width: $breakpoint-md) {
+			position: static;
+			background: transparent;
+			padding: 0;
+			border-radius: 0;
+		}
+   }
+
+   &__nav-close {
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      margin: 0 0 20px auto;
+      position: relative;
+
+      @media screen and (min-width: $breakpoint-md) {
+			display: none;
+		}
+
+      &::before, &::after {
+         content: '';
+         position: absolute;
+         top: 10px;
+         left: 0;
+         width: 100%;
+         height: 2px;
+         background: $accent-color;
+         transform: rotate(45deg);
+      }
+
+      &::after {
+         transform: rotate(-45deg);
+      }
+   }
+
+   &__nav-list {
+      @media screen and (min-width: $breakpoint-md) {
+			display: flex;
+			gap: 15px;
+		}
+		@media screen and (min-width: $breakpoint-lg) {
+			justify-content: flex-end;
+		}
+   }
+
+   &__nav-item {
+      text-align: center;
+      margin-bottom: 15px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+
+      @media screen and (min-width: $breakpoint-md) {
+			margin-bottom: 0;
+		}
+   }
+
+   &__nav-link {
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 700;
+      color: $regular-color;
+      border-radius: $radius-md;
+      background: $bg-color;
+      padding: 7px;
+      display: block;
+      transition: .3s ease;
+
+      @media screen and (min-width: $breakpoint-md) {
+			border-radius: 0;
+			background: none;
+			color: $basic-white;
+			font-size: 16px;
+			padding: 0;
+
+         &--light {
+            color: $active-color;
+         }
+		}
+
+		&.active {
+			color: $accent-color;
+			@media screen and (min-width: $breakpoint-md) {
+            border-bottom: 2px solid $accent-color;
+			}
+		}
+
+		&:hover {
+			background: $bg-alt-color;
+			@media screen and (min-width: $breakpoint-md) {
+				background: none;
+            color: $basic-white;
+            border-bottom: 2px solid $basic-white;
+			}
+		}
+
+      &--light:hover {
+         @media screen and (min-width: $breakpoint-md) {
+            color: $active-color;
+            border-color: $active-color;
+         }
+      }
+
+		&:active {
+			background: $separator-color;
+			@media screen and (min-width: $breakpoint-md) {
+				background: none;
+            color: $accent-color;
+            border-bottom: 2px solid $accent-color;
+			}
+		}
+   }
+}

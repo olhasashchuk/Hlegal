@@ -1,0 +1,120 @@
+.wrapper__contact {
+   display: flex;
+   flex-flow: column;
+   min-height: 100%;
+}
+.contact {
+   padding-bottom: 30px;
+   @media screen and (min-width: $breakpoint-md) {
+      padding-bottom: 60px;      
+   }
+
+   &__body {
+      display: flex;
+      flex-flow: column;
+      gap: 30px;
+      @media screen and (min-width: $breakpoint-lg) {
+         flex-flow: row;
+         justify-content: center;
+         gap: 60px;         
+		}
+   }
+
+   &__body-info {
+      display: flex;
+      flex-flow: column;
+      font-size: 20px;
+      line-height: 26px;
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 0 1 48%;      
+		}
+
+      @media screen and (min-width: $breakpoint-xl) {
+         flex: 0 1 42%;      
+		}
+
+      @media screen and (min-width: $breakpoint-xxl) {
+         flex: 0 1 40%;      
+		}
+   }
+
+   &__body-address {
+      color: $main-color;
+      padding-bottom: 30px;
+      border-bottom: 4px solid $separator-color;
+      margin-bottom: 30px;
+   }
+
+   &__body-phone {
+      display: block;
+      @include text-link ($alt-color);
+      margin-bottom: 15px;
+   }
+
+   &__body-mail {
+      @include text-link ($regular-color);
+      transition: .3s ease;
+      padding-bottom: 30px;
+      border-bottom: 4px solid $separator-color;
+      margin-bottom: 38px;
+      &:hover {
+         color: $accent-color;
+      }
+   }
+
+   &__body-social {
+      width: 150px;
+      position: relative;
+      padding-left: 43px;
+      font-size: 12px;
+      line-height: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: .3s ease;
+      
+      a {
+         @include text-link ($regular-color);
+      }
+
+      a:hover {
+         color: $accent-color;
+      }
+
+      svg {
+         position: absolute;
+         top: -8px;
+         left: 0;
+         width: 38px;
+         height: 38px;
+         fill: $regular-color;
+         transition: .3s ease;
+         &:hover {
+            fill: $accent-color;
+         }
+      }
+
+   }
+
+
+
+   &__body-form {
+      display: flex;
+      justify-content: center;
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 0 1 48%;      
+		}
+
+      @media screen and (min-width: $breakpoint-xl) {
+         flex: 0 1 42%;      
+		}
+
+      @media screen and (min-width: $breakpoint-xxl) {
+         flex: 0 1 40%;      
+		}
+      
+   }
+}
+
+
+
+

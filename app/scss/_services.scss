@@ -1,0 +1,52 @@
+.services {
+   padding: 15px 0;
+   @media screen and (min-width: $breakpoint-md) {
+      padding: 30px 0;
+   }
+
+   &__subtitle {
+      @include subtitle(transparent);
+      @include main-gradient-text($gradient-red-text);
+      padding-bottom: 15px;
+   }
+
+   &__cards {
+      padding: 15px 0 30px 0;
+      @media screen and (min-width: $breakpoint-md) {
+         display: flex;
+         gap: 60px;
+         flex-wrap: wrap;
+         padding: 15px 0 30px 0;
+      }
+   }
+
+   &__cards-inner {
+      @media screen and (min-width: $breakpoint-md) {
+         flex: 1 1 44%;
+      }
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 1 1 28%;
+      }
+   }
+
+   &__cards-title {
+      @include text-link ($regular-color);
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 15px;
+      transition: .3s ease;
+      &:hover {
+         color: $accent-color;
+      }
+   }
+
+   &__cards-text {
+      line-height: 26px;
+      color: $basic-white;
+      padding-bottom: 30px;
+      @media screen and (min-width: $breakpoint-md) {
+         padding-bottom: 0px;
+      }   
+   }
+}

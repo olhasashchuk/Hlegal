@@ -1,0 +1,81 @@
+.ecommerce {
+   color: ($basic-white); 
+   padding: 15px 45px;
+   @media screen and (min-width: $breakpoint-md) {
+      padding: 30px 0;
+   }
+
+   &__body {
+      @include flex-center;
+      flex-flow: column wrap;
+      border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+      margin-bottom: 15px;
+   }
+
+   &__body-subtitle {
+      display: block;
+      @include subtitle(transparent);
+      @include main-gradient-text($gradient-red-text);
+      padding-bottom: 28px;
+   }
+
+	&__body-desk {
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      padding-bottom: 28px;
+	}
+
+	&__body-btn {
+      margin-bottom: 30px;
+      @media screen and (min-width: $breakpoint-md) {
+         margin-bottom: 60px;
+      }
+	}
+
+   &__services {
+      padding: 15px 0;
+      text-align: left;
+   }
+
+   &__services-title {
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 30px;
+   }
+
+   &__services-list {
+      display: flex;
+      flex-flow: column;
+      font-size: 18px;
+      line-height: 26px;
+      @media screen and (min-width: $breakpoint-md) {
+         flex-flow: row nowrap;
+         gap: 60px;
+      }
+   }
+
+   &__services-list ul {
+      @media screen and (min-width: $breakpoint-md) {
+         flex: 0 0 48%; 
+      }
+   }
+
+   &__services-item {
+      padding-bottom: 15px;
+      padding-left: 14px;
+      position: relative;
+      &::before {
+         content: '';
+         position: absolute;
+         top: 10px;
+         left: 0;
+         width: 6px;
+         height: 6px;
+         background: $accent-color;
+         border-radius: 50%;
+      }
+   }
+}
+
+

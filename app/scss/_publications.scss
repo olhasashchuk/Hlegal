@@ -1,0 +1,143 @@
+.wrapper__publications {
+   display: flex;
+   flex-flow: column;
+   min-height: 100%;
+}
+
+.publications {
+   padding: 30px 0;
+   background: $bg-color;
+
+   &__subtitle {
+      @include subtitle(transparent);
+      @include main-gradient-text($gradient-red-text);
+      padding-bottom: 30px;
+   }
+
+   &__switch-input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+	}
+
+   &__switch-label {
+      display: flex;
+      width: 233px;
+      height: 42px;
+      border-radius: $radius-md;
+      cursor: pointer;
+      transition: .3s linear;
+      position: relative;
+      margin: 0 auto 30px;
+      background: $separator-color;
+      z-index: 1;
+
+      &::before {
+         content: '';
+         position:absolute;
+         top: 2px;
+         left: 2px;
+         width: 50%;
+         bottom: 2px;
+         border-radius: $radius-md;
+         background:$basic-white;
+         transition: .3s linear;
+         z-index: -1;
+      }
+	}
+
+   &__switch-label span {
+      flex: 1 1 50%;
+      @include flex-center;
+      color: $main-color;
+      font-weight: 700;
+   }
+
+   &__switch-input:checked + &__switch-label::before  {
+      transform: translateX(-100%);
+      left: calc(100% - 2px);
+   }
+
+   &__cards {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      gap: 30px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid $separator-color;
+      @media screen and (min-width: $breakpoint-md) {
+         flex-flow: row wrap;
+      }
+   }
+
+   &__cards-inner {
+      flex: 1 1 100%;
+      background: $basic-white;
+      border-radius: $radius-md;
+      overflow: hidden;
+      
+      @media screen and (min-width: $breakpoint-md) {
+         flex: 1 1 46%;
+      };
+
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 1 1 30%;
+      }
+   }
+
+   &__cards-image {
+      height: 200px;
+      background: $bg-color;
+
+      a {
+         cursor: pointer;
+      }
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__cards-body {
+      padding: 30px;
+   }
+
+   &__cards-title {
+      @include text-link ($regular-color);
+      display: block;
+      font-weight: 700;
+      padding-bottom: 15px;
+      cursor: pointer;
+      line-height: 20px;
+      transition: .3s ease;
+
+      &:hover{
+         color: $accent-color;
+      }
+   }
+
+   &__cards-date {
+      @include uppercase-text (12px, $text-color);
+      color: $text-color;
+      padding-bottom: 15px;
+      border-bottom: 4px solid $separator-color;
+      margin-bottom: 15px;
+   }
+
+   &__cards-text {
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   &__btn {
+      flex: 1 1 100%;
+      display: flex;
+      @include flex-center;
+   }
+
+   &__btn-link {
+      text-decoration: none;
+   }
+}

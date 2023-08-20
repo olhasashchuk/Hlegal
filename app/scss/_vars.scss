@@ -1,0 +1,109 @@
+$main-color: #323264;
+$alt-color: #46466E;
+$soft-color: #686887;
+$accent-color: #F0145A;
+$regular-color: #24A3FF;
+$hover-color: #0085FF;
+$active-color: #006CCF;
+$bg-color: #F5F5FA;
+$bg-alt-color:#EDEDF7;
+$bg-header: rgba(245, 245, 250, 0.2);
+$text-color: #B3B3BA;
+$basic-white: #ffffff;
+$separator-color: #E6E6F0;
+$gradient: linear-gradient(130deg, #323264, #323264 75%, #A54B5F 100%);
+$gradient-soft: linear-gradient(42deg, #323264 15%, #323264 50%, #7A425E 88%);
+$gradient-red: linear-gradient(325deg, #F0145A 5%, #693264 70%);
+$gradient-supersoft: linear-gradient(230deg, #323264 10%, #323264 60%, #643E72 90%);
+$gradient-red-text: linear-gradient(90deg, #F0145A, #EF8080 100%);
+
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 24px;
+$radius-rounded: 50%;
+
+// breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1920px;
+
+// !MIXINS
+
+@mixin main-gradient-text($bg-color) {
+   background: $bg-color;
+   color: transparent;
+   background-clip: text;
+   -webkit-background-clip: text;
+}
+ 
+@mixin title($color) {
+   font-weight: 700;
+   font-size: 38px;
+   line-height: 46px;
+   color: $color;
+}
+ 
+@mixin subtitle($color) {
+   font-weight: 700;
+   font-size: 30px;
+   line-height: 36px;
+   color: $color;
+ 
+   @media screen and (min-width: $breakpoint-md) {
+     font-size: 38px;
+     line-height: 46px;
+   }
+}
+ 
+@mixin flex-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+ 
+@mixin base-link {
+   color: $regular-color;
+   text-decoration: none;
+   font-weight: 400;
+   transition: color .3s ease-in;
+ 
+   &:hover {
+     color: $accent-color;
+   }
+}
+
+@mixin text-link ($color) {
+   color: $color;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+@mixin uppercase-text ($font-size, $color) {
+   font-size: $font-size;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   color: $color;
+}
+
+//fonts
+@font-face {
+   font-family: 'Montserrat';
+   src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2');
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
+
+
+
