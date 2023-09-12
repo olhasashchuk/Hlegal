@@ -17,6 +17,12 @@ $gradient-red: linear-gradient(325deg, #F0145A 5%, #693264 70%);
 $gradient-supersoft: linear-gradient(230deg, #323264 10%, #323264 60%, #643E72 90%);
 $gradient-red-text: linear-gradient(90deg, #F0145A, #EF8080 100%);
 
+// border-bottom
+
+$bottom-sm: 2px solid $separator-color;
+$bottom-lg: 4px solid $separator-color;
+
+// border-radius
 
 $radius-sm: 8px;
 $radius-md: 12px;

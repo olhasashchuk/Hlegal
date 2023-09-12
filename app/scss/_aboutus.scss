@@ -1,0 +1,184 @@
+.aboutus {
+   padding-bottom: 30px;
+   @media screen and (min-width: $breakpoint-md) {
+      padding-bottom: 0;
+   }
+
+   &__body {
+      padding-bottom: 30px;
+      @media screen and (min-width: $breakpoint-md) {
+         padding-bottom: 60px;
+      }
+
+      @media screen and (min-width: $breakpoint-lg) {
+         display: flex;
+         gap: 30px;
+      }
+
+      @media screen and (min-width: $breakpoint-xl) {
+         margin: 0 140px;
+      }
+   }
+
+   &__inner {
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 1 1 auto;
+      }
+   }
+
+   &__subtitle {
+      @include subtitle(transparent);
+      @include main-gradient-text($gradient-red-text);
+      margin-bottom: 30px;
+   }
+
+   &__subtitle-down {
+      margin-bottom: 0px;
+      @media screen and (min-width: $breakpoint-lg) {
+         padding-left: 30px;
+         flex: 1 0 362px;
+      }
+   }
+
+   &__text {
+      font-size: 18px;
+      line-height: 30px;
+      padding-bottom: 30px;
+
+      &:last-child {
+         @media screen and (min-width: $breakpoint-lg) {
+            padding-bottom: 0px;
+         }  
+      }
+   }
+
+   &__statistic {
+      border-left: 4px solid $separator-color;
+      padding-left: 30px;
+      margin-bottom: auto;
+
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 1 0 388px;
+      }
+   }
+
+   &__statistic-item {
+      padding-bottom: 40px;
+
+      &:last-child {
+         padding-bottom: 0px;
+      }
+
+      p {
+         line-height: 22px;
+         color: $main-color;
+      }
+   }
+
+   &__statistic-image {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      svg {
+         height: 32px;
+         width: 32px;
+      }
+      span {
+         font-weight: 700;
+         font-size: 36px;
+         line-height: 36px;
+         color: transparent;
+         @include main-gradient-text($gradient-red-text);
+      }
+   }
+
+   &__image {
+      margin-bottom: 30px;
+
+      @include flex-center;
+      padding: 35px 0;
+      background: url(../images/team.jpg) no-repeat 50% / cover;
+      color: $basic-white;
+      text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.80);
+      opacity: 0.8;
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 700;
+      letter-spacing: 13px;
+      text-transform: uppercase;
+
+      @media screen and (min-width: $breakpoint-md) {
+         padding: 88px 0;
+         font-size: 46px;
+         line-height: 56px;
+         letter-spacing: 63px;
+         margin-bottom: 60px;
+      }
+
+      @media screen and (min-width: $breakpoint-lg) {
+         padding: 103px 0;
+         font-size: 86px;
+         line-height: 105px;
+      }
+
+      @media screen and (min-width: $breakpoint-xl) {
+         padding: 163px 0;
+         font-size: 96px;
+         line-height: 117px;
+      }
+      @media screen and (min-width: $breakpoint-xxl) {
+         padding: 233px 0;
+      }
+   }
+}
+
+   // swiper athievment
+.achievment {
+   background: $bg-color;
+   padding: 30px;
+   border-bottom: $bottom-sm;
+   
+   &__swiper-title {
+      @include uppercase-text (14px, $main-color);
+      text-align: center;
+      margin-bottom: 30px;
+   }
+   
+   &__swiper {
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+      
+   }
+
+	&__slide {
+      border-radius: $radius-md;
+      overflow: hidden;
+      background: $basic-white;
+      @include flex-center;
+	}
+
+   &__slide-image {
+      padding: 25px 0;
+      height: 110px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+
+   &__swiper-pagination {
+      margin: 30px 0 0;
+      text-align: center;
+      .swiper-pagination-bullet {
+         width: 14px;
+         height: 14px;
+         background: $regular-color;
+      }
+   }
+}
+
+
+

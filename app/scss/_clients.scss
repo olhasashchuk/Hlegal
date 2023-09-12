@@ -43,11 +43,7 @@
 
 	&__lists-item {
 		height: 120px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		
-
 		@media screen and (min-width: $breakpoint-md) {
          flex: 1 1 33%;
       }
@@ -96,6 +92,8 @@
 	}
 
 	&__lists-link {
+		height: 100%;
+		@include flex-center;
 		cursor: pointer;
 	}
 }

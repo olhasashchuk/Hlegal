@@ -8,7 +8,7 @@
    &__body {
       @include flex-center;
       flex-flow: column wrap;
-      border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 4px solid rgba($separator-color, 0.5);
       margin-bottom: 15px;
    }
 

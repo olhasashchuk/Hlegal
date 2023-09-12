@@ -1,17 +1,12 @@
-.wrapper__publications {
-   display: flex;
-   flex-flow: column;
-   min-height: 100%;
-}
-
 .publications {
    padding: 30px 0;
    background: $bg-color;
+   border-bottom: 2px solid $separator-color;
 
    &__subtitle {
       @include subtitle(transparent);
       @include main-gradient-text($gradient-red-text);
-      padding-bottom: 30px;
+      margin-bottom: 30px;
    }
 
    &__switch-input {
@@ -64,7 +59,6 @@
       justify-content: center;
       gap: 30px;
       padding-bottom: 30px;
-      border-bottom: 2px solid $separator-color;
       @media screen and (min-width: $breakpoint-md) {
          flex-flow: row wrap;
       }
@@ -86,12 +80,9 @@
    }
 
    &__cards-image {
+      display: block;
       height: 200px;
       background: $bg-color;
-
-      a {
-         cursor: pointer;
-      }
 
       img {
          width: 100%;
@@ -105,15 +96,15 @@
    }
 
    &__cards-title {
-      @include text-link ($regular-color);
-      display: block;
-      font-weight: 700;
-      padding-bottom: 15px;
-      cursor: pointer;
-      line-height: 20px;
+      margin-bottom: 15px;
       transition: .3s ease;
-
-      &:hover{
+      a {
+         @include text-link ($regular-color);
+         font-weight: 700;
+         line-height: 20px;
+      }
+     
+      &:hover a {
          color: $accent-color;
       }
    }
@@ -132,12 +123,7 @@
    }
 
    &__btn {
-      flex: 1 1 100%;
-      display: flex;
       @include flex-center;
-   }
-
-   &__btn-link {
-      text-decoration: none;
+      margin-bottom: 30px;
    }
 }

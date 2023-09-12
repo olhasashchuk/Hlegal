@@ -1,8 +1,3 @@
-.wrapper__contact {
-   display: flex;
-   flex-flow: column;
-   min-height: 100%;
-}
 .contact {
    padding-bottom: 30px;
    @media screen and (min-width: $breakpoint-md) {
@@ -41,61 +36,62 @@
    &__body-address {
       color: $main-color;
       padding-bottom: 30px;
-      border-bottom: 4px solid $separator-color;
+      border-bottom: $bottom-lg;
       margin-bottom: 30px;
    }
 
    &__body-phone {
       display: block;
-      @include text-link ($alt-color);
       margin-bottom: 15px;
+
+      a {
+         @include text-link ($alt-color);
+      }
    }
 
    &__body-mail {
-      @include text-link ($regular-color);
       transition: .3s ease;
       padding-bottom: 30px;
-      border-bottom: 4px solid $separator-color;
+      border-bottom: $bottom-lg;
       margin-bottom: 38px;
-      &:hover {
+
+      a {
+         @include text-link ($regular-color);
+      }
+
+      &:hover a {
          color: $accent-color;
       }
    }
 
    &__body-social {
-      width: 150px;
+      max-width: 150px;
       position: relative;
-      padding-left: 43px;
+      padding: 7px 0 0 43px;
       font-size: 12px;
       line-height: 16px;
       text-transform: uppercase;
       font-weight: 700;
       transition: .3s ease;
-      
-      a {
-         @include text-link ($regular-color);
-      }
-
-      a:hover {
+      @include text-link ($regular-color);
+   
+      &:hover {
          color: $accent-color;
+         svg {
+            fill: $accent-color;
+         }
       }
 
       svg {
          position: absolute;
-         top: -8px;
+         top: 0;
          left: 0;
          width: 38px;
          height: 38px;
          fill: $regular-color;
          transition: .3s ease;
-         &:hover {
-            fill: $accent-color;
-         }
       }
-
    }
-
-
 
    &__body-form {
       display: flex;
@@ -111,7 +107,10 @@
       @media screen and (min-width: $breakpoint-xxl) {
          flex: 0 1 40%;      
 		}
-      
+   }
+
+   &__body-form-contant {
+      display: block;
    }
 }
 

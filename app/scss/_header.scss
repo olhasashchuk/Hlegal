@@ -37,10 +37,6 @@
          border-bottom: 2px solid $basic-white;
          border-left: 2px solid $basic-white;
          transform: rotate(-45deg);
-
-         &:hover {
-            border-color: $accent-color;
-         }
       }
 
       &:hover::before {

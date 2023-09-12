@@ -20,7 +20,6 @@ body {
       left: 20px;
       right: 20px;
       height: 10px;
-      width: auto;
       background: #CACADB;
       border-radius: 0px 0px $radius-md $radius-md;
    } 
@@ -30,6 +29,12 @@ body {
       right: 40px;
       background: #E7E7F2;
    }
+}
+
+.wrapper__basic {
+   display: flex;
+   flex-flow: column;
+   min-height: 100%;
 }
 
 .container {
@@ -71,6 +76,7 @@ main {
 
 .nav__link {
    display: inline-block;
+   padding-right: 10px;
    @include uppercase-text (14px, $regular-color);
    margin-bottom: 10px;
    cursor: pointer;
@@ -80,7 +86,7 @@ main {
       content:'';
       position: absolute;
       top: 2px;
-      right: -10px;
+      right: 0;
       width: 8px;
       height: 8px;
       border-top: 2px solid $regular-color;
@@ -88,11 +94,12 @@ main {
       transform: rotate(45deg);
       transition: .3s ease;
    }
+
    &:hover{
       color: $accent-color;
-   }
-   &:hover::before {
-      border-color: $accent-color;
+      &::before {
+         border-color: $accent-color;
+      }
    }
 }
 
@@ -113,7 +120,6 @@ main {
    padding: 14px;
    background: $basic-white;
    border-radius: $radius-lg;
-   margin-bottom: 30px; 
 }
 
 .btn {
