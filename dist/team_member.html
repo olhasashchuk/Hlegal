@@ -3,12 +3,12 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Contact</title>
+   <title>Team Oksana Kobzar</title>
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-      <symbol viewBox="0 0 24 24" id="facebook">
+		<symbol viewBox="0 0 24 24" id="facebook">
 			<g clip-path="url(#clip0_22721_6686)">
 				<path d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07813V12.0733H10.125V9.41343C10.125 6.38755 11.9165 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"/>
 			</g>
@@ -43,7 +43,7 @@
             <div class="header__box">
                <a class="header__box-logo header__box-logo--light" href="index.html">
                   <img src="images/logo2.svg" alt="Hlegal" width="70" height="32">
-                  <span>contact</span>
+                  <span>team</span>
                </a>
                <div class="header__box-burger header__box-burger--light">
                   <span></span>
@@ -59,49 +59,50 @@
                      <a class="header__nav-link header__nav-link--light" href="services.html">services</a>
                   </li>
                   <li class="header__nav-item">
-                     <a class="header__nav-link header__nav-link--light" href="team.html">team</a>
+                     <a class="header__nav-link header__nav-link--light active" href="team.html">team</a>
                   </li>
                   <li class="header__nav-item">
                      <a class="header__nav-link header__nav-link--light" href="publications.html">publications</a>
                   </li>
                   <li class="header__nav-item">
-                     <a class="header__nav-link header__nav-link--light active" href="contact.html">contact</a>
+                     <a class="header__nav-link header__nav-link--light" href="contact.html">contact</a>
                   </li>
                </ul>
             </nav>
-         </div>
+         </div> 
       </header>
       <main>
-         <section class="contact">
+         <section class="member">
             <div class="container">
-               <div class="contact__body">
-                  <div class="contact__body-info">
-                     <address class="contact__body-address">
-                        <p>Kyiv,<br>Mechnikova str., 14/1</p>
-                     </address>
-                     <p class="contact__body-phone"><a href="tel:0800211927">0800 211 927</a></p>
-                     <p class="contact__body-mail"><a href="mailto:contact@forstudy.space">contact@forstudy.space</a></p>
-                     <a  href="#" class="contact__body-social" target="_blank">
-                        <svg>
-                           <use href="#facebook"></use>
-                        </svg>
-                        <span>Our page on facebook</span>
-                     </a>
+               <div class="member__info">
+                  <div class="member__image">
+                     <picture><source srcset="images/team/team-5.webp" type="image/webp"><img src="images/team/team-5.jpg" alt="Oksana Kobzar" width="315" height="500"></picture>
                   </div>
-                  <div class="contact__body-form">
-                     <div class="form__content contact__body-form-contant">
-                        <form action="#">
-                           <h2 class="form__subtitle">We would like to help you</h2>
-                           <div class="form__body">
-                              <input class="form__input" type="text" placeholder="Name" required>
-                              <textarea class="form__input form__textarea" placeholder="Message" required></textarea>
-                              <h3 class="form__titlecontact">How to answer you?</h3>
-                              <input class="form__input" type="tel" id="phone" name="phone" placeholder="Phone number" pattern="[+]{1}[0-9]{2}[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" required>
-                              <input class="form__input" type="email" placeholder="Email" name="e-mail" required>
-                              <button type="submit" class="form__btn btn">Send message</button>
-                           </div>
-                        </form>
+                  <div class="member__title">
+                     <h2 class="team__inner-title">Oksana Kobzar</h2>
+                     <div class="member__title-inner">
+                        <p>Equity partner, Attorney-at-law</p>
+                        <span class="member__title-point"></span>
+                        <a href="mailto:kobzar@forstudy.space">kobzar@forstudy.space</a>
+                        <span class="member__title-point"></span>
+                        <a href="#" target="_blank">LinkedIn profile</a>
                      </div>
+                  </div>
+                  <div class="member__desk">
+                     <p>
+                        Oksana heads the practice of international trade and shipping. She specializes in resolving disputes related to the purchase and sale of raw materials and transportation of goods by sea.
+                     </p>
+                     <p>
+                        Desis represents the interests of shipowners, freight forwarders, cargo owners, shipping agents, container lines, as well as international banks and P&I clubs.
+                     </p>
+                     <h3 class="member__desk-subtitle">
+                        Education
+                     </h3>
+                     <p>
+                        National University "Odessa Law Academy", Master of Law.
+                     </p>
+                     <h3 class="member__desk-subtitle">Experience</h3>
+                     <p>Her professional experience includes resolving disputes under English law and representing interests in foreign commercial arbitrations such as GAFTA, FOSFA and LMAA. Danilo also represents the interests of clients in the state courts of Ukraine on similar disputes, as well as in the ICAC and IAC at the CCI of Ukraine</p>
                   </div>
                </div>
             </div>
@@ -130,7 +131,8 @@
             </div>
          </div>
       </footer>
-   </div>
+   </div>  
    <script src="js/main.min.js"></script>
+   
 </body>
 </html>

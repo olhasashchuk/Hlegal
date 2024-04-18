@@ -95,7 +95,7 @@ main {
       transition: .3s ease;
    }
 
-   &:hover{
+   &:hover {
       color: $accent-color;
       &::before {
          border-color: $accent-color;
@@ -142,6 +142,4 @@ main {
    &:active {
       background: $active-color;
    }
-
- 
 }

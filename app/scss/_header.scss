@@ -224,7 +224,7 @@
       &::before, &::after, span {
          position: absolute;
          content: '';
-         top: 6px;
+         top: 8px;
          left: 6px;
          right: 0;
          width: 24px;
@@ -246,7 +246,7 @@
 
       &::after {
          top:auto;
-         bottom: 6px;
+         bottom: 8px;
       }
 
       span{
