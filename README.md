@@ -19,6 +19,8 @@ Live view by clicking the link: https://hlegal-2023.netlify.app/
 
 You can also clone the project and open it in localhost, or enjoy the preview video below instead
 
+https://github.com/olhasashchuk/Hlegal/assets/128645346/ed7e26ed-f037-4bd3-ae33-a002331a2613
+
 ### Getting Started
 
 To run Todo-App locally, follow these steps:
